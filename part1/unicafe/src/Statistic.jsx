@@ -8,18 +8,20 @@ const Statistics = (props) => {
 
     return (
         <div>
-            <h1>Statistic</h1>
+            <h1>Statistics</h1>
             {good == 0 && neutral == 0 && bad == 0 ? (
                 <p>No feedback given</p>
             ) : (
-                <>
-                    <StatisticLine text="Good" value={good} />
-                    <StatisticLine text="Neutral" value={neutral} />
-                    <StatisticLine text="Bad" value={bad} />
-                    <StatisticLine text="All" value={total} />
-                    <StatisticLine text="Average" value={average} />
-                    <StatisticLine text="Positive" value={positive} />
-                </>
+                <table>
+                    <tbody>
+                        <StatisticLine text="Good" value={good} />
+                        <StatisticLine text="Neutral" value={neutral} />
+                        <StatisticLine text="Bad" value={bad} />
+                        <StatisticLine text="All" value={total} />
+                        <StatisticLine text="Average" value={average} />
+                        <StatisticLine text="Positive" value={positive} />
+                    </tbody>
+                </table>
             )}
         </div>
     );
